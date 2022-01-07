@@ -1,0 +1,115 @@
+* list
+** 连接
+- *:* 连接一个元素到一个list或者字符串之中
+- *++* 连接两个list
+- *[1,2,3]* 是 *1:2:3:[]* 的语法糖
+
+** func
+*** 取前后元素
+ file:./images/list_func.png
+
+
+*** other
+| func    | 说明                     |
+|---------+--------------------------|
+| length  | 长度                     |
+| null    | 是否为空                 |
+| reverse | 反转                     |
+| take    | 返回list的前几个元素     |
+| maximum | 取最大的元素             |
+| sum     | 所有元素和               |
+| elem    | 判断某个元素是否在list中 |
+
+* typeclass
+
+** 定义
+类似于 *interface*
+** 几个例子
+- *Eq*  判断是否相等
+- *Ord* 返回比较的结果(LT,EQ,GT)
+- *show* 取任一show的成员型别，将其变为string
+- *read* 与show相反。若要单独使用，需要指明其类型,否则自动推导
+- *Enum* 有succ 和 pred 可得到range里的前驱和后继
+
+* Func
+** Pattern matching
+- *as*  all就相当于x：xs, 保存了整体。只需要 *名字加上@符号* ,在模式匹配前
+
+#+begin_src haskell
+capital all@(x:xs) = "The first letter of " ++ all ++ " is " ++ [x]
+#+end_src
+
+** Guards
+- 相当于if
+
+#+begin_src haskell
+max' :: (Ord a) => a -> a -> a
+max' a b
+    | a > b     = a
+    | otherwise = b
+#+end_src
+
+- 注意： 函数后面没有 *=*
+** 关键字：where
+- where 定义中的名字只对本函数可见
+
+#+begin_src haskell
+-- 告诉姓与名的首字母
+initials :: String -> String -> String
+initials firstname lastname = [f] ++ ". " ++ [l] ++ "."
+    where (f:_) = firstname
+          (l:_) = lastname
+#+end_src
+
+- where可以嵌套，例如定义的时候写几个辅助函数，把辅助函数写到where中，而辅助函数又需要一些参数，写到下一层where中。
+
+** 关键字let
+- let中绑定的名字只对 _in_ 部分可见
+- let [bindings] in [expressions]
+
+* 高阶函数
+- haskell中的函数 可以以函数作为参数，可以以函数作为返回结果
+- 函数只有一个参数,都是一步一步的 _不全调用_ ,最终执行完毕
+
+** map
+- 取一个函数和list作参数
+
+
+
+** filter
+- 取一个限制条件和list作参数
+
+#+begin_src haskell
+ghci> filter (>3) [1,5,3,2,1,6,4,3,2,1]
+[5,6,4]
+#+end_src
+
+** $
+- $ 拥有最低的优先级，右结合，是为了减少括号的使用。
+
+#+begin_src haskell
+-- 第一组
+sum (filter (> 10) (map (*2) [2..10])
+sum $ filter (> 10) $ map (*2) [2..10]
+
+-- 第二组
+sum (map sqrt [1..130])
+sum $ map sqrt [1..130]
+#+end_src
+
+** .
+- 函数组合
+
+* Modules
+** import
+- 如果有冲突，使用这种方式调用
+
+#+begin_src haskell
+import qualified Data.Map as M
+#+end_src
+
+** Data.Map
+- 构造方法：二元组list
+-
+
+* IO

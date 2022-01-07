@@ -1,0 +1,36 @@
+[cols=2*]
+|===
+|单词
+|解释
+
+|wild card
+|a symbol that can represent any letter or number
+
+|sophisticated
+|clever and complicated in the way that it works or is presented
+
+|alternative
+|a thing that you can choose to do or have out of two or more possibilities
+
+|symptom
+|a change in your body or mind that shows that you are not healthy
+
+|easy to reason about
+|helps us write better programs.
+
+|rinse
+|to wash something with clean water only, not using soap
+
+|scratch
+|to rub your skin with your nails
+
+|possess
+|to have a particular quality or feature
+
+|conjecture
+|an opinion or idea that is not based on definite knowledge and is formed by guessing
+
+|violate
+|to go against or refuse to obey a law, an agreement
+
+|===
