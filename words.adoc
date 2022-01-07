@@ -33,4 +33,8 @@
 |violate
 |to go against or refuse to obey a law, an agreement
 
+|cure
+|1.to make a person or an animal healthy again after an illness  +   
+2.to deal with a problem successfully
+
 |===
