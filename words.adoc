@@ -37,4 +37,40 @@
 |1.to make a person or an animal healthy again after an illness  +   
 2.to deal with a problem successfully
 
+|handy
+|easy to use or to do
+
+|product
+|quantity obtained by multiplying one number by another 
+
+|intuitive
+|easy to understand and to use 
+
+|palindrome
+|a word or phrase that reads the same backwards as forwards
+
+|capstone
+|the best and final thing that sb achieves
+
+|replicate
+|to copy sth exactly 
+
+|debt
+|a sum of money that sb owes.
+
+|robust
+|strong and full of determination; showing that you are sure about what you are doing or saying 
+
+|magnify
+|to make sth seem more important or serious than it really is 
+
+|tremendous
+|very great 
+
+|inherent
+|that is a basic or permanent part of sb/sth and that cannot be removed 
+
+|prior
+|happening or existing before sth else or before a particular time
+
 |===
